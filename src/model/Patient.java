@@ -33,7 +33,5 @@ public class Patient {
     public void setPatientNames(String patientNames) {
         this.patientNames = patientNames;
     }
-    
-    
-    
+
 }

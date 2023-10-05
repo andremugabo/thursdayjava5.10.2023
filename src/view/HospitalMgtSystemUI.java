@@ -18,7 +18,7 @@ public class HospitalMgtSystemUI {
         PatientDao dao = new PatientDao();
         String feedBack;
         String answer;
-        while(condition){
+        while (condition) {
             System.out.println("=================");
             System.out.println("1. Create a Patient");
             System.out.println("2. Update a Patient");
@@ -30,7 +30,7 @@ public class HospitalMgtSystemUI {
             System.out.println("Choice: ");
             Scanner sc = new Scanner(System.in);
             int choice = sc.nextInt();
-            switch(choice){
+            switch (choice) {
                 case 1:
                     System.out.print("Enter Patient ID: ");
                     patientId = sc.nextInt();
@@ -40,16 +40,16 @@ public class HospitalMgtSystemUI {
                     thePatient.setPatientId(patientId);
                     thePatient.setPatientNames(names);
                     // create DAO Object
-                    
+
                     feedBack = dao.createPatient(thePatient);
                     System.out.println(feedBack);
                     System.out.println("Enter Yes or No to quit");
                     answer = sc.next();
-                    if(answer.equalsIgnoreCase("yes")){
-                        condition=true;
-                    }else{
+                    if (answer.equalsIgnoreCase("yes")) {
+                        condition = true;
+                    } else {
                         System.out.println("Thank you for using the system");
-                        condition=false;
+                        condition = false;
                     }
                     break;
                 case 2:
@@ -66,7 +66,7 @@ public class HospitalMgtSystemUI {
                     System.out.print("Enter Names     :");
                     names = sc.next();
                     // create Model Object
-                    
+
                     thePatient.setPatientId(patientId);
                     thePatient.setPatientNames(names);
                     // create DAO Object
@@ -74,11 +74,11 @@ public class HospitalMgtSystemUI {
                     System.out.println(feedBack);
                     System.out.println("Enter Yes or No to quit");
                     answer = sc.next();
-                    if(answer.equalsIgnoreCase("yes")){
-                        condition=true;
-                    }else{
+                    if (answer.equalsIgnoreCase("yes")) {
+                        condition = true;
+                    } else {
                         System.out.println("Thank you for using the system");
-                        condition=false;
+                        condition = false;
                     }
                     break;
                 case 0:
@@ -86,7 +86,7 @@ public class HospitalMgtSystemUI {
                     System.exit(0);
                     break;
                 default:
-                    
+
             }
         }
     }
